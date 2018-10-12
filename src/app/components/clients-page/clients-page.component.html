@@ -1,0 +1,34 @@
+<section>
+  <div class="list-and-input">
+    <app-search-input></app-search-input>
+    <app-clients-list (select)="onSelect($event)"></app-clients-list>
+  </div>
+
+  <div class="clients-detail">
+    <div class="selected-title">Selected client: </div>
+    <div *ngIf="selected !== null">
+      <div class="d-flex">
+        <img class="avatar" src={{selected.avatar}}>
+        <div>
+          <p class="name"><span>Name: </span> {{selected.firstName}}</p>
+          <p class="job-title"><span>Job: </span> {{selected.title}}</p>
+          <p class="company-name"><span>Company name: </span> {{selected.company}}</p>
+          <p class="other-info"><span>Last name: </span> {{selected.lastName}}</p>
+          <p class="other-info"><span>Country: </span> {{selected.country}}</p>
+          <p class="other-info"><span>City: </span> {{selected.city}}</p>
+          <p class="other-info"><span>Street: </span> {{selected.street}}</p>
+          <p class="other-info"><span>Zip code: </span> {{selected.zipCode}}</p>
+          <p class="other-info"><span>Phone: </span> {{selected.phone}}</p>
+          <p class="other-info"><span>Email: </span> {{selected.email}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--
+<div>{{(selectedClient | async)['selected']}}</div>
+
+<div *ngIf="selected !== null">{{selected.city || selected}}</div>
+<div>{{(selectedClient | async)['selected'].city}}</div>-->

@@ -1,0 +1,35 @@
+<div>
+  <table mat-table [dataSource]="clientsService.clients">
+
+    <!-- Avatar Column -->
+    <ng-container matColumnDef="avatar">
+      <th mat-header-cell *matHeaderCellDef> Avatar </th>
+      <td mat-cell *matCellDef="let element" (click)="select.emit(element)">
+        <img class="avatar" src={{element.avatar}} alt="">
+      </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element" (click)="select.emit(element)"> {{element.firstName}} </td>
+    </ng-container>
+
+    <!-- JobTitle Column -->
+    <ng-container matColumnDef="jobTitle">
+      <th mat-header-cell *matHeaderCellDef> JobTitle </th>
+      <td mat-cell *matCellDef="let element" (click)="select.emit(element)"> {{element.title}} </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr class="tr-hover" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+
+
+

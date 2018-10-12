@@ -1,0 +1,46 @@
+section {
+  display: flex;
+  height: 100%;
+  margin: 15px;
+}
+
+.list-and-input {
+  width: 45%;
+  height: 100%;
+  overflow: auto;
+  border: 1px solid darkslategrey;
+}
+
+.clients-detail {
+  width: 55%;
+  height: 100%;
+  margin-left: 15px;
+  border: 1px solid darkslategrey;
+}
+
+.name {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.job-title,
+.company-name {
+  font-size: 20px;
+}
+
+.avatar {
+  margin-right: 10px;
+  height: 128px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+span {
+  font-weight: bold;
+}
+
+.selected-title {
+  margin-bottom: 15px
+}
