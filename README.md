@@ -1,5 +1,7 @@
 # TestTask
 
+I create onepage application with list of clients and their details. Clients data are stored in 'clients.json' wich will be loaded dynamicaly.List of clients is displayed in a table. If you click on a specific client, its detailed information will be displayed.It is possible to apply filtering and sorting to the table with customers. Used technologies: Angular 6, UI:@angular/material, Rx:rxjsv6, NgRx.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
